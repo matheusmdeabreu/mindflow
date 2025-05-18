@@ -1,16 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Funcionalidade do menu hamburger para mobile
-    const hamburgerBtn = document.querySelector('.hamburger-btn');
+    const hamburger = document.querySelector('.hamburger');
     const mobileMenu = document.querySelector('.mobile-menu');
     
-    if (hamburgerBtn && mobileMenu) {
+    if (hamburger && mobileMenu) {
         // Garantir que o menu esteja fechado ao carregar a página
-        hamburgerBtn.classList.remove('active');
+        hamburger.classList.remove('active');
         mobileMenu.classList.remove('active');
         
-        hamburgerBtn.addEventListener('click', function(e) {
-            e.preventDefault();
-            e.stopPropagation();
+        hamburger.addEventListener('click', function() {
             this.classList.toggle('active');
             mobileMenu.classList.toggle('active');
             // Prevenir rolagem quando o menu está aberto
@@ -18,10 +16,10 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         
         // Fechar o menu ao clicar em um link
-        const mobileMenuLinks = mobileMenu.querySelectorAll('.nav-link');
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
         mobileMenuLinks.forEach(link => {
             link.addEventListener('click', () => {
-                hamburgerBtn.classList.remove('active');
+                hamburger.classList.remove('active');
                 mobileMenu.classList.remove('active');
                 document.body.classList.remove('menu-open');
             });
@@ -31,8 +29,8 @@ document.addEventListener('DOMContentLoaded', () => {
         document.addEventListener('click', function(e) {
             if (mobileMenu.classList.contains('active') && 
                 !mobileMenu.contains(e.target) && 
-                !hamburgerBtn.contains(e.target)) {
-                hamburgerBtn.classList.remove('active');
+                !hamburger.contains(e.target)) {
+                hamburger.classList.remove('active');
                 mobileMenu.classList.remove('active');
                 document.body.classList.remove('menu-open');
             }

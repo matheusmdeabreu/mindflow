@@ -1,0 +1,60 @@
+/* Soluu00e7u00e3o definitiva para o overlay do hero */
+
+/* Reset completo da seu00e7u00e3o hero */
+.hero {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    margin-top: 60px;
+    background-attachment: scroll !important;
+    overflow: hidden;
+}
+
+/* Criar um novo overlay com pseudo-elemento */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: -10px; /* Estender para alm do limite superior */
+    left: -10px; /* Estender para alm do limite esquerdo */
+    right: -10px; /* Estender para alm do limite direito */
+    bottom: -10px; /* Estender para alm do limite inferior */
+    background-color: rgba(0, 0, 0, 0.85);
+    z-index: 1;
+}
+
+/* Desativar o overlay original */
+.hero::after {
+    display: none !important;
+}
+
+/* Garantir que o conteu00fado fique acima do overlay */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+}
+
+/* Ajustes especu00edficos para dispositivos mu00f3veis */
+@media (max-width: 768px) {
+    .hero {
+        min-height: 100vh;
+        height: auto;
+        padding-bottom: 3rem; /* Adicionar padding extra na parte inferior */
+    }
+    
+    /* Garantir que o overlay cubra toda a u00e1rea em dispositivos mu00f3veis */
+    .hero::before {
+        top: -20px;
+        left: -20px;
+        right: -20px;
+        bottom: -20px;
+        width: calc(100% + 40px);
+        height: calc(100% + 40px);
+    }
+}
