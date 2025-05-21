@@ -444,6 +444,13 @@ body.menu-open {
     line-height: 1.2;
 }
 
+/* Redução de 10% no tamanho da fonte do título principal em dispositivos móveis */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 3.15rem; /* 3.5rem reduzido em 10% */
+    }
+}
+
 .hero p {
     font-size: 1.3rem;
     margin-bottom: 2.5rem;
