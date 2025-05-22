@@ -467,6 +467,19 @@ body.menu-open {
     flex-wrap: wrap;
 }
 
+/* Ajuste para que os botões não ocupem toda a largura em tablets */
+@media (min-width: 768px) and (max-width: 992px) {
+    .hero-buttons {
+        width: 70%;
+        margin: 0 auto;
+    }
+    
+    .hero-buttons .hero-button {
+        width: auto;
+        min-width: 180px;
+    }
+}
+
 .hero-button {
     padding: 1.2rem 2.5rem;
     border-radius: 0.5rem;
