@@ -8,10 +8,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 2rem;
+    padding: 2rem 2rem 60px 2rem; /* Adicionado mais padding na parte inferior */
     margin-top: 60px;
     background-attachment: scroll !important;
-    overflow: hidden;
+    overflow: visible; /* Alterado para visível para o botão não ser cortado */
 }
 
 /* Criar um novo overlay com pseudo-elemento */
@@ -37,7 +37,10 @@
     z-index: 2;
     width: 100%;
     max-width: 800px;
+    min-height: 100%;
     text-align: center;
+    padding-bottom: 80px; /* Aumentado para dar mais espaço ao botão */
+    box-sizing: border-box;
 }
 
 /* Ajustes especu00edficos para dispositivos mu00f3veis */
