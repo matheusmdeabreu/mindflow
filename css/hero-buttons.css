@@ -12,9 +12,9 @@
 /* Estilos para o botão de rolagem */
 .scroll-down-button {
     position: absolute;
-    bottom: 0;
+    bottom: 100px;
     left: 50%;
-    transform: translate(-50%, 50%);
+    transform: translate(-50%, 0);
     width: 40px;
     height: 40px;
     display: flex;
@@ -34,7 +34,7 @@
 
 .scroll-down-button:hover {
     background-color: rgba(0, 0, 0, 0.9);
-    transform: translate(-50%, 50%) scale(1.1);
+    transform: translate(-50%, 0) scale(1.1);
 }
 
 /* Ajustes para dispositivos móveis */
