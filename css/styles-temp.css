@@ -5,6 +5,18 @@
     box-sizing: border-box;
 }
 
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+}
+
+/* Garantir que nenhum elemento ultrapasse a largura da viewport */
+img, svg, iframe, video, embed, object {
+    max-width: 100%;
+    height: auto;
+}
+
 /* Estilos básicos */
 body {
     font-family: 'Space Grotesk', sans-serif;

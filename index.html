@@ -27,6 +27,7 @@
     <link rel="stylesheet" href="css/hero-overlay.css">
     <link rel="stylesheet" href="css/hero-buttons.css">
     <link rel="stylesheet" href="css/timeline.css">
+    <link rel="stylesheet" href="css/animations.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
@@ -94,7 +95,7 @@
             <h1>Atendimento Inteligente para o seu Negócio</h1>
             <p>Da captação ao atendimento automatizado: eficiência e disponibilidade 24/7.</p>
             <div class="hero-buttons">
-                <a href="#how-it-works" class="hero-button primary">A Solução Completa</a>
+                <a href="#complete-solution" class="hero-button primary">A Solução Completa</a>
                 <a href="#projects" class="hero-button secondary" style="text-decoration:none;">O Que Já Fizemos</a>
             </div>
         </div>
@@ -108,7 +109,7 @@
         <div class="section-content">
             <h2 class="section-title">O que fazemos por você</h2>
             <div class="steps-container">
-                <div class="step">
+                <div class="step" id="config-step">
                     <div class="step-icon">
                         <svg class="icon" viewBox="0 0 24 24">
                             <!-- Engrenagem externa -->
@@ -126,14 +127,14 @@
                     <h3>Configuração Personalizada</h3>
                     <p>Nossa equipe entende sua empresa e configura o bot com inteligência artificial sob medida.</p>
                 </div>
-                <div class="step">
+                <div class="step" id="whatsapp-step">
                     <div class="step-icon">
                         <img src="images/whatsapp-icon.svg" alt="WhatsApp Icon" class="whatsapp-icon" />
                     </div>
                     <h3>Integração no WhatsApp</h3>
                     <p>Conectamos ao seu número comercial e ativamos o atendimento automático 24h por dia.</p>
                 </div>
-                <div class="step">
+                <div class="step" id="results-step">
                     <div class="step-icon">
                         <svg class="icon" viewBox="0 0 15 15">
                             <defs>
